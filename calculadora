@@ -1,0 +1,82 @@
+def calculadora(soma, somab):
+    somatotal = soma + somab
+    return somatotal
+
+def calculadora2(sub , sub2):
+    subtotal = sub - sub2
+    return subtotal
+
+def calculadora3(mult , mult2):
+    multtotal = mult * mult2
+    return multtotal
+
+def calculadora4(div , div2):
+    divtotal = div / div2
+    if div == 0: 
+       print('Erro') 
+    return divtotal
+
+def calculadora5(num , expoente):
+    potenciacao = num ** expoente
+    return potenciacao
+
+def calculadora6(fatorial):
+    i = 1
+    fator = 1  
+    if fatorial == 0:
+        return 1 
+    else: 
+        for i in range(1,fatorial +1):
+            fator *= i
+        return fator
+    
+    
+
+
+while True:
+    print('Calculadora')
+    print('\n Escolha uma função: ')
+    print('\n 1 - Soma \n 2 - Subtrção \n 3 - multiplicação \n 4 - Divisão \n 5 - Potenciação \n 6 - Fatorial \n 7 - Sair')
+ 
+    opcao = int(input('Digite o número: ')) 
+
+    if opcao == 1:
+        sum1 = float(input('Digite um número: '))
+        sum2 = float(input('Digite outro número: '))
+        respostasoma = calculadora(sum1,sum2)
+        print(f'O resulatado da soma é {respostasoma}')    
+    elif opcao == 2:
+        sub1 = float(input('Digite um número: '))
+        sub2 = float(input('Digite outro número: '))
+        respostasub = calculadora2(sub1,sub2)
+        print(f'O resultado da subtração é {respostasub}')
+    elif opcao == 3:
+        mult1 = float(input('Digite um número: '))
+        mult2 = float(input('Digite outro número: '))
+        respostamult = calculadora3(mult1,mult2)
+        print(f'O resultado da multiplicação é {respostamult}')
+    elif opcao == 4:
+        div1 = float(input('Digite um número: '))
+        div2 = float(input('Digite outro número: '))
+        if div1 == 0:
+            print('Impossível dividir por 0')
+            continue 
+        respostadiv = calculadora4(div1,div2)
+        print(f'O resultado da divisão é {respostadiv}')
+    elif opcao == 5: 
+        pot1 = float(input('Digite um número: '))
+        pot2 = float(input('Digite outro número: '))
+        repostapot = calculadora5(pot1,pot2)
+        print(f'O resultado da potenciação é {repostapot}')
+    elif opcao == 6:
+        fat = int(input('Digite o número: '))
+        respostafat = calculadora6(fat)
+        print(f'O fatorial é {respostafat}')
+    elif opcao == 7:
+        print('Saindo...')
+        break 
+    else:
+        print('Opção inexistente')
+        continue 
+        
+        
